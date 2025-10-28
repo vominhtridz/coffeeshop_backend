@@ -29,7 +29,7 @@ public class AuthEntryPointJwt implements AuthenticationEntryPoint {
         // *** PHẦN SỬA LỖI CORS QUAN TRỌNG ***
         // Ngay cả khi trả về lỗi 401, chúng ta VẪN PHẢI đính kèm header CORS
         // để trình duyệt (React) có thể đọc được response lỗi.
-        response.addHeader("Access-Control-Allow-Origin", "https://coffee-frontend-g0xk.onrender.com"); // Hoặc "*" nếu bạn muốn
+        response.addHeader("Access-Control-Allow-Origin", "*"); // Hoặc "*" nếu bạn muốn
         response.addHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
         response.addHeader("Access-Control-Allow-Headers", "Authorization, Content-Type, Cache-Control, Accept");
         response.addHeader("Access-Control-Allow-Credentials", "true");
